@@ -1,1 +1,29 @@
+------------------------   PROJECT 4 - INDIVIDUAL   ------------------------
+
+RUNNING THE SIMULATION
+    1) Download and open the following files:
+             o   init_Track.m
+             o   init_Car.m
+             o   Main.m
+             o   AnimateTrack.m
+             o   Actual_Animation.m
+             o   raceStat.m
+             o   P4_Wk3.slx
+    2) Run the following file:
+             o   Main.m
+
+PROJECT SUMMARY
+
+This part of the project works on our base model used throughout Project 4 that had us
+combining lateral and longitudinal dynamics and a driver model to guide a car with an 
+EV based powertrain around the track. We suppose to have the vehicle go around the track
+as many times as possible in 1 hour starting at an 80% SOC and utilizing regenerative 
+breaking along the way. We failed to get the vehicle to complete a whole lap, but from
+the base I added a Height subsystem that took in the X-position of the track in order
+to identify its location. It then uses the given formula to solve for the height of the
+race track and thus the angle of the slope that the car has to face while going up this 
+slope. From this it adds a force that will take the slope into account using the force
+due to gravity relation or F = m*g*sin(theta). Then subtracting this from the net forces
+in the longitudinal forces subsystem that is used to find acceleration, the system accounts
+for the difference in height that takes place.
 
